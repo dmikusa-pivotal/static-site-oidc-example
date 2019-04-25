@@ -1,0 +1,18 @@
+# provider URL for your OIDC providr
+oidc-provider-url: 
+
+# your client id & secret
+oidc-client-id: 
+oidc-client-secret: 
+
+# the redirect URL
+oidc-redirect-url:
+
+# this should be a random passphrase, used for session/state encryption
+oidc-crypto-passphrase: 
+
+# the scopes to request
+oidc-scopes: 
+
+# the claims to check to confirm that someone should be allowed to access the site
+oidc-require-claim: 

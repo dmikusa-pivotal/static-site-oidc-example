@@ -1,0 +1,16 @@
+---
+applications:
+- name: static-site-oidc
+  memory: 64M
+  buildpacks:
+  - php_buildpack
+  route:
+    - static-site-oidc.cfapps.io
+  env:
+    OIDC_PROVIDER_URL: '((oidc-provider-url))'
+    OIDC_CLIENT_ID: '((oidc-client-id))'
+    OIDC_CLIENT_SECRET: '((oidc-client-secret))'
+    OIDC_REDIRECT_URL: '((oidc-redirect-url))'
+    OIDC_CRYPTO_PASSPHRASE: '((oidc-crypto-passphrase))'
+    OIDC_SCOPES: '((oidc-scopes))'
+    OIDC_REQUIRE_CLAIM: '((oidc-require-claim))'

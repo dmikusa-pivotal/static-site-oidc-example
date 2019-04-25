@@ -1,0 +1,34 @@
+<html>
+    <head><title>SPA Demo</title></head>
+    <body>
+        <h1>SPA App</h1>
+        <p>This is a fake SPA app that requires the access token to make requests on behalf of the user. To do this, there is a URL you can access provided by mod_auth_openidc. Here's an example of doing that below.</p>
+        <p>Details on functionality provided by mod_auth_openidc can be found <a href="https://github.com/zmartzone/mod_auth_openidc/wiki/Single-Page-Applications">here</a>.</p>
+        <pre>
+            window.addEventListener("load", function(){
+                fetch('https://static-site-oidc.cfapps.io/redirect_url?info=json')
+                .then(function(response) {
+                  return response.json();
+                })
+                .then(function(myJson) {
+                  var pre = document.getElementById("access_token");
+                  pre.innerHTML = JSON.stringify(myJson, null, 2);
+                });
+            });
+        </pre>
+        <p>Actual Access Token displayed below:</p>
+        <pre id="access_token">Loading...</pre>
+        <script>
+            window.addEventListener("load", function(){
+                fetch('https://static-site-oidc.cfapps.io/redirect_url?info=json')
+                .then(function(response) {
+                  return response.json();
+                })
+                .then(function(myJson) {
+                  var pre = document.getElementById("access_token");
+                  pre.innerHTML = JSON.stringify(myJson, null, 2);
+                });
+            });
+        </script>
+    </body>
+</html>
