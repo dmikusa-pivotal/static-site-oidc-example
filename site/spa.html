@@ -6,7 +6,7 @@
         <p>Details on functionality provided by mod_auth_openidc can be found <a href="https://github.com/zmartzone/mod_auth_openidc/wiki/Single-Page-Applications">here</a>.</p>
         <pre>
             window.addEventListener("load", function(){
-                fetch('https://static-site-oidc.cfapps.io/redirect_url?info=json')
+                fetch('/redirect_url?info=json')
                 .then(function(response) {
                   return response.json();
                 })
@@ -20,7 +20,7 @@
         <pre id="access_token">Loading...</pre>
         <script>
             window.addEventListener("load", function(){
-                fetch('https://static-site-oidc.cfapps.io/redirect_url?info=json')
+                fetch('/redirect_url?info=json')
                 .then(function(response) {
                   return response.json();
                 })
